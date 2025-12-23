@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2025-12-23 — first prototype</title>
+  <meta name="description" content="Space Cadet devlog entry." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="window">
+      <div class="titlebar">
+        <div>SPACE.CADET // DEVLOG</div>
+        <div class="dots" aria-hidden="true">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="panel post">
+        <h2>2025-12-18 — First Prototype</h2>
+
+        <p>
+          Got a basic system running in real time.
+        </p>
+
+        <hr>
+
+        <h2>What works</h2>
+        <ul class="list">
+          <li><span>01</span> N-body gravity</li>
+          <li><span>02</span> Stable orbits when dt is sane</li>
+          <li><span>03</span> Camera follow + quick inspect</li>
+        </ul>
+
+        <hr>
+
+        <h2>What’s annoying</h2>
+        <ul class="list">
+          <li><span>01</span> Scale breaks the moment you zoom out a lot</li>
+          <li><span>02</span> UI readability goes to zero under extreme zoom</li>
+          <li><span>03</span> I’m still guessing what “good defaults” are</li>
+        </ul>
+
+        <hr>
+
+        <h2>Next</h2>
+        <ul class="list">
+          <li><span>01</span> Orbit prediction overlay</li>
+          <li><span>02</span> Velocity vectors that don’t clutter everything</li>
+          <li><span>03</span> Better scale/zoom rules</li>
+        </ul>
+
+        <p style="margin-top:14px;">
+          <a href="index.html">← all devlogs</a> &nbsp;|&nbsp;
+          <a href="../index.html">terminal</a>
+        </p>
+      </div>
+
+      <div class="footer">
+        <div>© <span id="year"></span> SPACE CADET</div>
+        <div>DEVLOG</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
