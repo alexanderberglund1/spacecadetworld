@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025-12-25 — v0.3.0: menus, inspector, thrusters</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="window">
+      <div class="titlebar">
+        <div>SPACE.CADET</div>
+        <div class="dots" aria-hidden="true">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      
+<div class="panel post">
+  <h2 class="post-title">2025-12-25 — v0.3.0: menus, inspector, thrusters</h2>
+  <p class="post-meta">2025-12-25</p>
+
+  <div class="post-content">
+    <p>v0.3.0 is the first release that feels like a real application instead of a prototype. The structure is in place now: menus, overlays, consistent input handling, and enough tooling to actually <em>use</em> the simulation.</p>
+<p>Release: https://github.com/alexanderberglund1/kandidat-space-cadet/releases/tag/v0.3.0</p>
+<h2>Added</h2>
+<ul>
+<li>Main menu with an updated visual style</li>
+<li>Living background (star parallax + flyby events)</li>
+<li>Fade-in, vignette, and small UI polish details</li>
+<li>Pause / options overlay
+<ul>
+<li>Open with <strong>ESC</strong> in Sandbox and Galaxy Demo</li>
+<li>Resume / Main Menu / Quit</li>
+<li>Correct input blocking while the overlay is open</li>
+</ul>
+</li>
+<li>Inspector panel
+<ul>
+<li>Velocity and acceleration readouts</li>
+<li>Direction + magnitude visualization</li>
+</ul>
+</li>
+<li>Sandbox-only thrusters for manual orbit adjustments</li>
+<li>Orbit assist when creating bodies</li>
+<li>Predicted trajectories</li>
+<li>Bound vs escape classification</li>
+</ul>
+<h2>Sandbox</h2>
+<ul>
+<li>Stable N-body gravity simulation</li>
+<li>Drag-to-create bodies with initial velocity</li>
+<li>Smooth camera follow / cycle / center</li>
+<li>Time scaling</li>
+<li>Pause freezes physics while keeping camera + UI responsive</li>
+<li>HUD avoids the inspector panel automatically</li>
+</ul>
+<h2>Galaxy Demo</h2>
+<ul>
+<li>Predefined, stable solar system</li>
+<li>Controlled physics with a dominant central star</li>
+<li>Inspector + pause menu fully supported</li>
+</ul>
+<h2>Technical</h2>
+<ul>
+<li>Scene structure cleanup</li>
+<li>Consistent input handling across scenes</li>
+<li>General stability and polish improvements</li>
+</ul>
+<p>Next up is mostly iteration: better readability under extreme zoom, less clutter in vectors, and continuing to tighten the feel of the tools.</p>
+
+  </div>
+
+  <div class="post-nav">
+    <a href="/devlog/">← all devlogs</a>
+    <span>·</span>
+    <a href="/">terminal</a>
+  </div>
+</div>
+
+
+      <div class="footer">
+        <div>© <span id="year"></span> SPACE CADET</div>
+        <div>BUILD: v0.1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

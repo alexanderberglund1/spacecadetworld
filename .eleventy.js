@@ -5,11 +5,17 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("readableDate", (value) => {
     const d = value instanceof Date ? value : new Date(value);
-    return new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+    return new Intl.DateTimeFormat("en-CA", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).format(d);
   });
 
   eleventyConfig.addCollection("devlog", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/devlog/posts/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi
+      .getFilteredByGlob("src/devlog/posts/*.md")
+      .sort((a, b) => b.date - a.date);
   });
 
   return {
@@ -18,6 +24,7 @@ module.exports = function (eleventyConfig) {
       output: "docs",
       includes: "_includes"
     },
+    templateFormats: ["njk", "md", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
   };
