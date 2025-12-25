@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+
+<div class="panel post">
+  <h2 class="post-title">{{ title }}</h2>
+  <p class="post-meta">{{ page.date | readableDate }}</p>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  <div class="post-nav">
+    <a href="/devlog/">← all devlogs</a>
+    <span>·</span>
+    <a href="/">terminal</a>
+  </div>
+</div>

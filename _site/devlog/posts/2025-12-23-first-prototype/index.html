@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025-12-23 — first prototype </title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="window">
+      <div class="titlebar">
+        <div>SPACE.CADET</div>
+        <div class="dots" aria-hidden="true">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      
+<div class="panel post">
+  <h2 class="post-title">2025-12-23 — first prototype </h2>
+  <p class="post-meta">2025-12-23</p>
+
+  <div class="post-content">
+    <p>Patch 0.2: Got the first playable version running. Nothing fancy.</p>
+<hr>
+<h2>What exists now</h2>
+<ul>
+<li>N-body gravity</li>
+<li>Fixed time step that behaves most of the time</li>
+<li>Camera follow and simple inspection</li>
+</ul>
+<hr>
+<h2>Problems</h2>
+<ul>
+<li>Scale handling is fragile when zooming far out</li>
+<li>UI readability collapses at extreme zoom</li>
+<li>Defaults are still guesswork</li>
+</ul>
+<hr>
+<h2>Next</h2>
+<ul>
+<li>Orbit prediction, even if inaccurate</li>
+<li>Velocity vectors that don’t clutter the screen</li>
+<li>Better rules for scale and camera limits</li>
+</ul>
+
+  </div>
+
+  <div class="post-nav">
+    <a href="/devlog/">← all devlogs</a>
+    <span>·</span>
+    <a href="/">terminal</a>
+  </div>
+</div>
+
+
+      <div class="footer">
+        <div>© <span id="year"></span> SPACE CADET</div>
+        <div>BUILD: v0.1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

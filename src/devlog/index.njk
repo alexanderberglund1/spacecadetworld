@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Devlog — Space Cadet
+description: Devlog entries.
+topbar: SPACE.CADET // DEVLOG
+footer_right: DEVLOG
+---
+
+<div class="panel">
+  <h2>Entries</h2>
+  <p class="small">Notes from development.</p>
+
+  <ul class="list">
+    {% for post in collections.devlog %}
+      <li>
+        {{ post.date | readableDate }} — <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p style="margin-top:16px;">
+    <a href="/">← back to terminal</a>
+  </p>
+</div>
