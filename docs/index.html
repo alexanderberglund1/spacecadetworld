@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space Cadet</title>
+  <meta name="description" content="Space Cadet — terminal.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="window">
+      <div class="titlebar">
+        <div>SPACE.CADET // TERMINAL</div>
+        <div class="dots" aria-hidden="true">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      
+<div class="boot" id="boot" aria-hidden="false">
+  <div class="bootbox">
+    <div class="boottitle">SPACE.CADET BIOS</div>
+    <div class="bootlog" id="bootlog" aria-live="polite"></div>
+
+    <div class="bar" aria-label="Loading">
+      <div class="fill" id="bootfill"></div>
+    </div>
+
+    <div class="bootmeta" id="bootmeta">Initializing…</div>
+
+    <div class="bootskip">
+      <button class="chip" id="skipBoot" type="button">skip</button>
+    </div>
+  </div>
+</div>
+
+<div class="terminal" aria-live="polite">
+  <div class="log" id="log" tabindex="0" aria-label="Terminal output (click to focus input)"></div>
+
+  <div class="inputrow">
+    <span class="prompt" aria-hidden="true">cadet@space:~$</span>
+    <input
+      id="cmd"
+      class="cmd"
+      autocomplete="off"
+      autocapitalize="none"
+      spellcheck="false"
+      placeholder="type a command… (try: help)"
+      aria-label="Command input"
+    />
+  </div>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawerbar">
+    <div id="drawerTitle">Panel</div>
+    <button class="xbtn" id="drawerClose" aria-label="Close panel" type="button">×</button>
+  </div>
+  <div class="drawerbody" id="drawerBody"></div>
+</div>
+
+<template id="tpl-status">
+  <div class="panel">
+    <h2>Status</h2>
+    <p>2D orbital sandbox. Gravity and motion first.</p>
+    <ul class="list">
+      <li><span>01</span> N-body experiments (small systems)</li>
+      <li><span>02</span> Inspect / follow tools</li>
+      <li><span>03</span> Devlogs while we build</li>
+    </ul>
+  </div>
+</template>
+
+<template id="tpl-devlog">
+  <div class="panel">
+    <h2>Devlog</h2>
+    <p class="small">Notes. Links below.</p>
+    <ul class="list">
+      <li><a href="/devlog/">open index →</a></li>
+      <li><a href="/devlog/latest/">latest →</a></li>
+    </ul>
+  </div>
+</template>
+
+<template id="tpl-builds">
+  <div class="panel">
+    <h2>Builds</h2>
+    <p class="small">Releases pulled from GitHub.</p>
+    <div id="buildsMount"></div>
+    <p class="small" style="margin-top:14px;">
+      <a href="https://github.com/alexanderberglund1/kandidat-space-cadet/releases" target="_blank" rel="noreferrer">open releases →</a>
+    </p>
+  </div>
+</template>
+
+<template id="tpl-contact">
+  <div class="panel">
+    <h2>Contact</h2>
+    <p class="small">Just a message form.</p>
+
+    <form action="https://formspree.io/f/xjgbpgpv" method="POST">
+      <label for="name">NAME</label>
+      <input id="name" name="name" required>
+
+      <label for="email">EMAIL</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">MESSAGE</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off">
+
+      <button class="btn" type="submit">SEND</button>
+    </form>
+  </div>
+</template>
+
+<script src="/assets/terminal.js"></script>
+
+
+      <div class="footer">
+        <div>© <span id="year"></span> SPACE CADET</div>
+        <div>BUILD: v0.1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
