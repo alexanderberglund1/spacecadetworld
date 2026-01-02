@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025-12-25 — v0.4.0: orbital analysis</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="window">
+      <div class="titlebar">
+        <div>SPACE.CADET</div>
+        <div class="dots" aria-hidden="true">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+
+      
+<div class="panel post">
+  <h2 class="post-title">2025-12-25 — v0.4.0: orbital analysis</h2>
+  <p class="post-meta">2025-12-25</p>
+
+  <div class="post-content">
+    <p>Space Cadet v0.4.0 is now released.</p>
+<p>This update builds directly on the stable foundation introduced in v0.3. Instead of adding more content, the focus for v0.4 has been on making the simulation <strong>more analyzable and easier to reason about</strong>.</p>
+<p>Release: https://github.com/alexanderberglund1/kandidat-space-cadet/releases/tag/v0.4.0</p>
+<h2>What’s new in v0.4</h2>
+<p>The inspector panel has been extended with actual analysis tools.</p>
+<h3>Energy</h3>
+<ul>
+<li>Kinetic energy</li>
+<li>Potential energy</li>
+<li>Total energy</li>
+<li>Bound / unbound classification based on total energy</li>
+</ul>
+<h3>Orbital parameters</h3>
+<ul>
+<li>Eccentricity</li>
+<li>Semi-major axis</li>
+<li>Periapsis and apoapsis</li>
+</ul>
+<p>All analysis features work both in <strong>Sandbox</strong> and <strong>Galaxy Demo</strong>.</p>
+<p>Orbital values are computed using a two-body approximation around the dominant gravitational body. They are intended for qualitative understanding and comparison, not for exact real-world units or high-precision predictions.</p>
+<h2>What this means for the project</h2>
+<p>With v0.4, Space Cadet moves from being purely an interactive gravity sandbox to also functioning as an <strong>analysis tool for orbital mechanics</strong>.</p>
+<p>You can now not only observe what happens in the simulation, but also understand <em>why</em> it happens.</p>
+<p>This release marks the end of the foundational work on structure and UI. Going forward, development can focus on control, reproducibility, and deeper analytical tooling.</p>
+
+  </div>
+
+  <div class="post-nav">
+    <a href="/devlog/">← all devlogs</a>
+    <span>·</span>
+    <a href="/">terminal</a>
+  </div>
+</div>
+
+
+      <div class="footer">
+        <div>© <span id="year"></span> SPACE CADET</div>
+        <div>BUILD: v0.1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
